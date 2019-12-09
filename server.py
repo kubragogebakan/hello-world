@@ -1,7 +1,7 @@
 from flask import Flask
 
 PORT = 8000
-MESSAGE = "Hello, world!\n"
+MESSAGE = "Hello, world from my custom AWS container !\n"
 
 app = Flask(__name__)
 
