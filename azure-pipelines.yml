@@ -10,5 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Free Trial (8bfb7110-29ad-40db-8077-b3e5de21866c)'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'Write-Host ''Hello, World!'''
