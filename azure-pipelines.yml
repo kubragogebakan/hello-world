@@ -10,9 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: AzureCLI@2
+- task: AzurePowerShell@5
   inputs:
     azureSubscription: 'Free Trial (8bfb7110-29ad-40db-8077-b3e5de21866c)'
-    scriptType: 'ps'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'Write-Host ''Hello, World!'''
+    ScriptType: 'InlineScript'
+    Inline: 'Write-Host ''''Hello, World!'''''
+    azurePowerShellVersion: 'LatestVersion'
